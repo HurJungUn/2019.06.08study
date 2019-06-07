@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Cairo|Jua|Noto+Sans+KR&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 #main {
     background-color: #eee;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 header {
@@ -182,3 +191,154 @@ footer p {
     align-items: center;
 }
 
+.loginbox {
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    margin-top: 10px;
+    width: 170px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #45d9fd;
+    transition: all 0.2s;
+}
+
+.loginbox:hover {
+    background-color: #45d9fd;
+    color: white;
+}
+
+.logoutbox {
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 10px;
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #45d9fd;
+    transition: all 0.2s;
+}
+
+.logoutbox:hover {
+    background-color: #45d9fd;
+    color: white;
+}
+
+.postbox {
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 60px;
+    width: 170px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #45d9fd;
+    transition: all 0.2s;
+}
+
+.postbox:hover {
+    background-color: #45d9fd;
+    color: white;
+}
+
+.box {
+    padding: 20px;
+    width: 30%;
+    height: 35vh;
+    transform: translate(-50%,-50%);
+    margin-top: 15%;
+    margin-left: 50%;
+    text-align: center;
+    background-color: #dddfe6;
+    border-radius: 20px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.box > h2 {
+    margin-bottom: 20px;
+}
+
+.box > ul > li {
+    width: 100%;
+    height: 50px;
+}
+
+.box > ul > li > input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    padding: 18px 19px 19px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.box > ul > li:first-child > input {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.box > ul > li:nth-child(2) > input {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.box > ul > li:last-child > input {
+    border-radius: 0.5rem;
+    padding: 0;
+    margin-top: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.wraper {
+    transform: translate(-50%,-50%);
+    margin-top: 20%;
+    margin-left: 50%;
+    width: 60%;
+    height: 400px;
+}
+
+.boardtitle {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    background-color: #a5dff9;
+    border-radius: 20px 20px 0 0;
+    line-height: 50px;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 25px;
+}
+
+.board {
+    padding: 20px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    background-color: #F8F8FF;
+    border-radius: 0 20px 20px 20px;
+}
+
+.title {
+    font-size: 25PX;
+    padding: 18px 19px 19px;
+    border-radius: 20px;
+    width: 90%;
+    height: 15px;
+    border: 1px solid transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents {
+    font-size: 15PX;
+    border: 1px solid transparent;
+    padding: 18px 19px 19px;
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 90%;
+    height: 60%;
+    font-family: 'Jua', sans-serif;
+}

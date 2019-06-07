@@ -21,10 +21,10 @@
     <aside id="submenu">
         <h2 class="my-3 text-center">Submenu</h2>
         @if(isset($_SESSION['user']))
-            <a href="/logout" class="btn btn-block btn-outline-primary">로그아웃</a>
-            <a href="/post" class="btn btn-block btn-outline-primary">포스팅</a>
+            <a href="/logout" class="logoutbox">로그아웃</a>
+            <a href="/post" class="postbox">포스팅</a>
         @else
-            <a href="/login" class="btn btn-block btn-outline-primary">로그인</a>
+            <a href="/login" class="loginbox">로그인</a>
         @endif
     </aside>
 
