@@ -323,6 +323,7 @@ footer p {
 }
 
 .title {
+    background-color: #F8F8FF;
     font-size: 25PX;
     padding: 18px 19px 19px;
     border-radius: 20px;
@@ -333,6 +334,7 @@ footer p {
 }
 
 .contents {
+    background-color: #F8F8FF;
     font-size: 15PX;
     border: 1px solid transparent;
     padding: 18px 19px 19px;
@@ -341,4 +343,12 @@ footer p {
     width: 90%;
     height: 60%;
     font-family: 'Jua', sans-serif;
+}
+
+.borderline {
+    margin: 20px auto 0;
+    border-radius: 20px;
+    width: 90%;
+    background-color: #45d9fd;
+    height: 3px;
 }
