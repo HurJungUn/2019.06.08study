@@ -371,16 +371,16 @@
         },
         {
             "name": "jenssegers/blade",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/blade.git",
-                "reference": "935de072bbdfd0a3c5513491b26a68af1b73b3ec"
+                "reference": "8dc7d31201cc25542dc03d40974ff7b583ed4e94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/blade/zipball/935de072bbdfd0a3c5513491b26a68af1b73b3ec",
-                "reference": "935de072bbdfd0a3c5513491b26a68af1b73b3ec",
+                "url": "https://api.github.com/repos/jenssegers/blade/zipball/8dc7d31201cc25542dc03d40974ff7b583ed4e94",
+                "reference": "8dc7d31201cc25542dc03d40974ff7b583ed4e94",
                 "shasum": ""
             },
             "require": {
@@ -415,7 +415,7 @@
                 "template",
                 "view"
             ],
-            "time": "2019-05-25T07:31:09+00:00"
+            "time": "2019-06-06T08:42:05+00:00"
         },
         {
             "name": "nesbot/carbon",

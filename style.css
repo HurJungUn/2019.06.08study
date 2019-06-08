@@ -352,3 +352,7 @@ footer p {
     background-color: #45d9fd;
     height: 3px;
 }
+
+.ck-editor__editable {
+    min-height: 250px;
+}

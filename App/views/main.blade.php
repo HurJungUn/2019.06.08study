@@ -42,49 +42,35 @@
 
     <div class="container mt-4">
         <section id="editorPick">
+            @foreach($list as $item)
             <div class="item">
                 <div class="img-box">
-                    <img src="/imgs/otaku.jpg" alt="아이템 이미지">
+                {!! $item->thumbnail !!}
                 </div>
                 <div class="info-box">
-                    <h3>박스 제목</h3>
-                    <p>박스에 대한 설명입니다. 어쩌구 저쩌구</p>
+                    <h3><a href="/view?id={{ $item->id }}">{{ $item->title }}</a></h3>
+                    <p>{{ date("Y년 m월 d일", strtotime($item->wdate)) }}</p>
+                    <p>{{ $item->content }}</p>
                 </div>
             </div>
-            <div class="item">
-                <div class="img-box">
-                    <img src="/imgs/otaku.jpg" alt="아이템 이미지">
-                </div>
-                <div class="info-box">
-                    <h3>박스 제목</h3>
-                    <p>박스에 대한 설명입니다. 어쩌구 저쩌구</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="img-box">
-                    <img src="/imgs/otaku.jpg" alt="아이템 이미지">
-                </div>
-                <div class="info-box">
-                    <h3>박스 제목</h3>
-                    <p>박스에 대한 설명입니다. 어쩌구 저쩌구</p>
-                </div>
-            </div>
-            <div class="item">
-                <div class="img-box">
-                    <img src="/imgs/otaku.jpg" alt="아이템 이미지">
-                </div>
-                <div class="info-box">
-                    <h3>박스 제목</h3>
-                    <p>박스에 대한 설명입니다. 어쩌구 저쩌구</p>
-                </div>
-            </div>
+            @endforeach
         </section>
         <ul class="pagination justify-content-center mt-5">
-            <li class="page-item"><a href="#" class="page-link">이전</a></li>
-            <li class="page-item"><a href="#" class="page-link">1</a></li>
-            <li class="page-item"><a href="#" class="page-link">2</a></li>
-            <li class="page-item"><a href="#" class="page-link">3</a></li>
-            <li class="page-item"><a href="#" class="page-link">다음</a></li>
+        @if(!$p->prev && $p->start != 1)
+        <li class="page-item"><a href="/?p={{$p->start - 1}}" class="page-link">이전</a></li>
+        @endif
+            @for($i = $p->start; $i <= $p->end; $i++)
+            @if($i == $p->current)
+            <li class="page-item" style="background-color: #ef9a9a;">
+            @else
+            <li class="page-item">
+            @endif
+                <a href="/?p={{$i}}" class="page-link">{{ $i }}</a>
+            </li>
+            @endfor
+            @if(!$p->prev)
+        <li class="page-item"><a href="/?p={{$p->end + 1}}" class="page-link">다음</a></li>
+        @endif
         </ul>        
     </div>
 @endsection
