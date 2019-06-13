@@ -14,7 +14,9 @@ if (!isset($_SESSION['user'])) {
     Route::get("/logout","UserController@logout");
     //글쓰기 관련 라우팅
     Route::get("/post","PostController@writePage");
+    Route::get("/delete","PostController@deletePage");
     Route::post("/post","PostController@writeProcess");
+    Route::post("/update","PostController@updatePage");
     // 첨부파일 업로드
     Route::post("/upload","PostController@uploadHandle");
 }

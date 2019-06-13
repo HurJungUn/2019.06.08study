@@ -10,7 +10,7 @@ class Pager {
     public $prev = true;
     public $next = true;
 
-    public $itemPerPage = 2;  //페이지당 글의 갯수
+    public $itemPerPage = 3;  //페이지당 글의 갯수
     public $pagePerChapter = 5; //챕터당 페이지 수
     public $current = 1;
 

@@ -62,4 +62,46 @@ class PostController extends MasterController {
 
         $this->render("post/view", ['data'=>$data]);
     }
+
+    public function deletePage() {
+        if (!isset($_GET['id'])) {
+            $_SESSION['flash_msg'] = ['msg'=>'존재하지 않는 글'];
+            header("Location: /");
+            exit;
+        }
+        $id = $_GET['id'];
+
+        $data = DB::query("DELETE FROM boards WHERE id = ?", [$id]);
+
+        if (!$data) {
+            $_SESSION['flash_msg'] = ['msg'=>'존재하지 않는 글'];
+            header("Location: /");
+            exit;
+        }
+
+        $_SESSION['flash_msg'] = ['msg'=>'삭제완료'];
+        header("Location: /");
+    }
+
+    public function updatePage() {
+        if (!isset($_POST['id'])) {
+            $_SESSION['flash_msg'] = ['msg'=>'존재하지 않는 글'];
+            header("Location: /");
+            exit;
+        }
+        $id = $_POST['id'];
+        $title = $_POST['title'];
+        $content = $_POST['content'];
+
+        $data = DB::query("UPDATE boards SET title=?, content=?, wdate=NOW() WHERE id = ?", [$title, $content, $id]);
+
+        if (!$data) {
+            $_SESSION['flash_msg'] = ['msg'=>'존재하지 않는 글'];
+            header("Location: /");
+            exit;
+        }
+
+        $_SESSION['flash_msg'] = ['msg'=>'수정완료'];
+        header("Location: /");
+    }
 }
